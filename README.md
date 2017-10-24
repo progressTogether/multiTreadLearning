@@ -1,2 +1,2 @@
-# mutilTreadLearning
+# multiTreadLearning
 To learn mutil thread.
