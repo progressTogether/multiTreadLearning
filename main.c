@@ -14,7 +14,7 @@ void *myThread1(void)
     int i;
     for(i=0; i<5; i++)
     {
-	printf("This is the 1st pthread,created by zieckey.\n");
+	printf("This is the 1st pthread,created by x-hui.\n");
 	sleep(1);//Let this thread to sleep 1 second,and then continue to run
 	}
 }
@@ -24,7 +24,7 @@ void *myThread2(void)
 	int i;
 	for (i=0; i<5; i++)
 	{
-		printf("This is the 2st pthread,created by zieckey.\n");
+		printf("This is the 2st pthread,created by x-hui.\n");
 		sleep(1);
 	}
 }
@@ -34,7 +34,7 @@ int main()
 	int i=0, ret=0;
 	pthread_t id1,id2;
  
-	ret = pthread_create(&id2, NULL, (void*)myThread1, NULL);
+	ret = pthread_create(&id1, NULL, (void*)myThread1, NULL);
 	if (ret)
 	{
 		printf("Create pthread error!\n");

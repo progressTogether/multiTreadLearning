@@ -2,19 +2,17 @@
 SOURCE  := $(wildcard *.c) $(wildcard *.cpp)
 OBJS    := $(patsubst %.c,%.o,$(patsubst %.cpp,%.o,$(SOURCE)))
 
-TARGET = mutilThreadTest
+TARGET = multiThreadTest
 
 GCC = gcc
 
-
 CFLAGS  := -o 
 
-$(OBJS):
-	$(GCC) $(SOURCE) -c -lpthread
-
 $(TARGET):$(OBJS)
-	$(GCC)  $(OBJS)　$(CFLAGS) 　
+	$(GCC) $(CFLAGS) $(TARGET) $(OBJS)  -lpthread
 
+$(OBJS):$(SOURCE)
+	$(GCC) -c $(SOURCE)	
 clean :
 	@rm -f *.o $(TARGET)
-#gcc main.c -o mutilThreadTest -lpthread
+#gcc main.c -o multiThreadTest -lpthread
